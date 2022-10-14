@@ -16,8 +16,18 @@ const Header = () => {
     setNavToggle(!navToggle);
   };
 
+  if (process.browser) {
+    document.querySelectorAll(".nav-link").forEach((el) => {
+      el.addEventListener("click", toggle);
+    });
+  }
+
   useEffect(() => {
     setNavToggle(false);
+
+    document.querySelectorAll(".nav-link").forEach((el) => {
+      el.addEventListener("click", toggle);
+    });
   }, []);
 
   return (
@@ -49,25 +59,15 @@ const Header = () => {
           </div>
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ms-auto">
-              <NavDropdown title="Menus" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/menu">All Menus</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <Link href="/menu" passHref>
-                  <NavDropdown.Item>Breakfast</NavDropdown.Item>
-                </Link>
-                <Link href="/menu" passHref>
-                  <NavDropdown.Item>Lunch</NavDropdown.Item>
-                </Link>
-                <Link href="/menu" passHref>
-                  <NavDropdown.Item>Dinner</NavDropdown.Item>
-                </Link>
-              </NavDropdown>
-              <Link href="/location" passHref>
-                <Nav.Link eventKey={2}>Location</Nav.Link>
-              </Link>
-              <Link href="/contact" passHref>
-                <Nav.Link eventKey={2}>Contact</Nav.Link>
-              </Link>
+              <Nav.Link eventKey={2} href="/#menu">
+                Menu
+              </Nav.Link>
+              <Nav.Link eventKey={2} href="/#location">
+                Location
+              </Nav.Link>
+              <Nav.Link eventKey={2} href="/#contact">
+                Contact
+              </Nav.Link>
               <Nav.Link
                 eventKey={4}
                 href="tel:000"
