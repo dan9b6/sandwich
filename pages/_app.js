@@ -1,7 +1,17 @@
-import '../styles/globals.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/main.css";
+
+import Header from "../components/header";
+import Footer from "../components/footer";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

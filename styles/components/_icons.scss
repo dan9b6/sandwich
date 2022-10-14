@@ -1,0 +1,22 @@
+.icon {
+  position: relative;
+  height: 30px;
+  width: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: invert(1);
+  transition: 0.25s;
+
+  &-facebook {
+    background-image: url("/images/svgs/facebook-f.svg");
+  }
+
+  &-instagram {
+    background-image: url("/images/svgs/instagram.svg");
+  }
+
+  &:hover {
+    filter: invert(0.75);
+  }
+}

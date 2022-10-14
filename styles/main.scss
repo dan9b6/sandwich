@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans&display=swap");
+
+@import "./abstract/variables";
+@import "./base/typography";
+@import "./components/banner";
+@import "./components/button";
+@import "./components/icons";
+@import "./components/menu";
+@import "./components/section";
+@import "./layout/header";
+@import "./layout/footer";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.location-details {
+  background-color: $c-white;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 1.5rem;
+  border-radius: $border-radius;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin: 0 auto;
+    max-width: 375px;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: 0;
+
+        &:last-of-type {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

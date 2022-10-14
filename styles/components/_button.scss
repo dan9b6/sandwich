@@ -1,0 +1,51 @@
+.btn {
+  border-radius: $border-radius;
+  border-color: $c-primary;
+  transition: 0.25s;
+
+  &-primary {
+    background-color: $c-primary;
+    border-color: $c-primary;
+    outline: $c-primary;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $c-primary-hover;
+      border-color: $c-primary-hover;
+    }
+
+    &:focus-visible {
+      background-color: $c-primary-hover;
+      border-color: $c-primary-hover;
+    }
+
+    &:active {
+      background-color: $c-primary-hover !important;
+      border-color: $c-primary-hover !important;
+    }
+  }
+
+  &-secondary {
+    background-color: $c-secondary;
+    border-color: $c-secondary;
+    outline: $c-secondary;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $c-secondary-hover;
+      border-color: $c-secondary-hover;
+    }
+
+    &:focus-visible {
+      background-color: $c-secondary-hover;
+      border-color: $c-secondary-hover;
+    }
+
+    &:active {
+      background-color: $c-secondary-hover !important;
+      border-color: $c-secondary-hover !important;
+    }
+  }
+}
